@@ -3,8 +3,10 @@
 .SILENT: build tidy
 
 build:
-	go build -o bin/funds ./services/funds/main.go
-	go build -o bin/kyc ./services/kyc/main.go
+	@for dir in services/*/; do \
+		service=$$(basename $$dir); \
+		go build -o bin/$$service ./$$dir/.; \
+	done
 	echo "📦 Buit binaries:"
 	@for file in bin/*; do \
 		echo "$$(du -h $$file)"; \
