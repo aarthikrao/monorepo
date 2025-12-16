@@ -1,0 +1,3 @@
+module github.com/aarthikrao/monorepo/common
+
+go 1.21.0
