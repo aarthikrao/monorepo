@@ -26,19 +26,19 @@ Once you have all the prerequisites installed, you can set up your local develop
 ```bash
 make local-deploy
 ```
-This command will use Docker Compose to spin up all the necessary components and start all the apps defined in the `infra/docker-compose.yml` file.
+This command will use Docker Compose to spin up all the necessary components and start all the apps defined in the `infra/local_setup/docker-compose.yml` file.
 
 ### Checking the status of docker containers
 You can check the status of the running containers using:
 ```bash
-docker compose -f infra/docker-compose.yml ps
+docker compose -f infra/local_setup/docker-compose.yml ps
 ```
 This will list all the services that are currently running as part of your local development environment.
 
 ### Stopping the local development environment
 You can stop the local development environment by running:
 ```bash
-docker compose -f infra/docker-compose.yml down
+docker compose -f infra/local_setup/docker-compose.yml down
 ```
 
 ### Additional commands

@@ -31,3 +31,7 @@ profile.cov
 # .idea/
 # .vscode/
 bin/*
+
+# Logs
+logs/
+*.log
